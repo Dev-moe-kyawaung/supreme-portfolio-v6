@@ -55,6 +55,12 @@ The website presents professional experience, Android development services, tech
 - Google Fonts.
 - GitHub Pages.
 
+- ## Personal Assets Notice
+
+The MIT License applies to the source code of this project.
+
+Personal identity assets, including photographs, logos, personal branding, biography content, contact information, and third-party media are not included under the MIT License unless explicitly stated otherwise.
+
 ## Project Structure
 
 ```text
