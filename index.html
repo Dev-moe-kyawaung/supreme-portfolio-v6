@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supreme Portfolio V6 · Part 1 · Sections 11-20</title>
+  <meta name="description" content="Enterprise Portfolio Part 1 - Sections 11-20. Professional Android Developer Portfolio.">
+  <meta name="keywords" content="Android Developer, Enterprise, Professional Portfolio, 60 Sections">
+  <meta name="author" content="Moe Kyaw Aung">
+  <link rel="icon" href="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp">
+<link rel="stylesheet" href="./assets/css/enterprise-shared.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+Myanmar:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* ================================================================
+       ENTERPRISE EDITION - PART 1 (Sections 11-20)
+       ================================================================ */
+
+    :root {
+      --ep-primary: #1e40af;
+      --ep-primary-dark: #1e3a8a;
+      --ep-primary-light: #3b82f6;
+      --ep-secondary: #0ea5e9;
+      --ep-accent: #f59e0b;
+      --ep-accent2: #10b981;
+      --ep-dark: #0f172a;
+      --ep-darker: #020617;
+      --ep-light: #f8fafc;
+      --ep-glass: rgba(255,255,255,0.03);
+      --ep-glass-border: rgba(255,255,255,0.06);
+      --ep-glass-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      --ep-radius: 0.75rem;
+      --ep-radius-lg: 1.25rem;
+      --ep-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --ep-font-sans: 'Inter', -apple-system, sans-serif;
+      --ep-font-mono: 'JetBrains Mono', monospace;
+      --ep-font-myan: 'Noto Sans Myanmar', sans-serif;
+      --ep-font-dm: 'DM Sans', sans-serif;
+      --ep-text: #f1f5f9;
+      --ep-text-secondary: #94a3b8;
+      --ep-gradient: linear-gradient(135deg, #1e40af, #0ea5e9, #f59e0b);
+      --ep-border: rgba(148, 163, 184, 0.1);
+    }
+
+    [data-bs-theme="light"] {
+      --ep-glass: rgba(0,0,0,0.02);
+      --ep-glass-border: rgba(0,0,0,0.06);
+      --ep-dark: #f8fafc;
+      --ep-darker: #ffffff;
+      --ep-text: #0f172a;
+      --ep-text-secondary: #64748b;
+      --ep-border: rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      font-family: var(--ep-font-sans);
+      background: var(--ep-darker);
+      color: var(--ep-text);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--ep-primary-light); text-decoration: none; transition: color var(--ep-transition); }
+    a:hover { color: var(--ep-secondary); }
+    .myan { font-family: var(--ep-font-myan); }
+    .mono { font-family: var(--ep-font-mono); }
+    .dm { font-family: var(--ep-font-dm); }
+
+    /* Navigation */
+    .ep-nav {
+      backdrop-filter: blur(20px);
+      background: rgba(15,23,42,0.85) !important;
+      border-bottom: 1px solid var(--ep-border);
+      padding: 0.75rem 1.5rem;
+    }
+    .ep-nav-brand {
+      font-weight: 800;
+      font-size: 1.15rem;
+      background: var(--ep-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ep-nav .nav-link {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--ep-text-secondary) !important;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.4rem;
+      transition: all var(--ep-transition);
+    }
+    .ep-nav .nav-link:hover { color: var(--ep-text) !important; background: var(--ep-glass); }
+
+    /* Section Styles */
+    .ep-section {
+      padding: 4rem 0;
+      position: relative;
+    }
+    .ep-label {
+      display: inline-block;
+      font-family: var(--ep-font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--ep-primary-light);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .ep-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+    .ep-gradient-text {
+      background: var(--ep-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ep-card {
+      background: var(--ep-glass);
+      border: 1px solid var(--ep-border);
+      border-radius: var(--ep-radius-lg);
+      padding: 1.75rem;
+      transition: all var(--ep-transition);
+      height: 100%;
+    }
+    .ep-card:hover {
+      border-color: var(--ep-primary-light);
+      transform: translateY(-3px);
+      box-shadow: var(--ep-glass-shadow);
+    }
+    .ep-card-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+    .ep-card-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .ep-card-text { color: var(--ep-text-secondary); font-size: 0.85rem; line-height: 1.7; }
+
+    /* Counter */
+    .ep-counter { text-align: center; padding: 1.5rem; }
+    .ep-counter-num { font-size: 2.5rem; font-weight: 800; color: var(--ep-primary-light); font-family: var(--ep-font-mono); line-height: 1; }
+    .ep-counter-label { font-size: 0.8rem; color: var(--ep-text-secondary); margin-top: 0.25rem; }
+
+    /* Timeline */
+    .ep-timeline { position: relative; padding-left: 2rem; }
+    .ep-timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--ep-border); }
+    .ep-timeline-item { position: relative; padding-bottom: 1.5rem; }
+    .ep-timeline-item::before { content: ''; position: absolute; left: -2.1rem; top: 0.4rem; width: 8px; height: 8px; background: var(--ep-primary-light); border-radius: 50%; }
+    .ep-timeline-year { font-family: var(--ep-font-mono); font-size: 0.8rem; color: var(--ep-primary-light); font-weight: 600; }
+
+    /* Skill Chip */
+    .ep-skill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.4rem 0.9rem; background: var(--ep-glass);
+      border: 1px solid var(--ep-border); border-radius: 0.4rem;
+      font-size: 0.8rem; font-weight: 500; margin: 0.2rem;
+      transition: all var(--ep-transition);
+    }
+    .ep-skill:hover { border-color: var(--ep-primary-light); transform: translateY(-2px); }
+
+    /* Progress */
+    .ep-progress { height: 5px; background: var(--ep-border); border-radius: 3px; overflow: hidden; }
+    .ep-progress-fill { height: 100%; background: var(--ep-gradient); border-radius: 3px; transition: width 1.5s ease; }
+
+    /* Badge */
+    .ep-badge {
+      display: inline-block; padding: 0.15rem 0.5rem; border-radius: 0.25rem;
+      font-size: 0.6rem; font-weight: 700; background: var(--ep-primary); color: #fff;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .ep-footer {
+      background: rgba(0,0,0,0.4); backdrop-filter: blur(20px);
+      border-top: 1px solid var(--ep-border); padding: 3rem 0 1.5rem;
+    }
+    .ep-footer h5 { font-weight: 700; font-size: 0.85rem; margin-bottom: 0.8rem; }
+    .ep-footer a { color: var(--ep-text-secondary); font-size: 0.8rem; display: block; padding: 0.15rem 0; }
+    .ep-footer a:hover { color: var(--ep-primary-light); }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+      .ep-section { padding: 2.5rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+  
+<nav class="navbar navbar-expand-lg ep-nav fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand ep-nav-brand" href="#section11">
+      MKA.Part1
+    </a>
+
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navPart1"
+      aria-controls="navPart1"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span
+        class="navbar-toggler-icon"
+        style="filter: invert(1);"
+      ></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navPart1">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#section11">11.Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section12">12.Process</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section13">13.Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section14">14.FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section15">15.Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section16">16.Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section17">17.Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section18">18.Achievements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section19">19.Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section20">20.Tools</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- ================================================================ -->
+  <!-- SECTION 11: SERVICES (Enterprise) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section11" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">11 · Services</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Services</span></h2>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="ep-card text-center">
+            <i class="fa-brands fa-android fa-3x mb-3" style="color: #3DDC84;"></i>
+            <h4 class="ep-card-title">Native Android Development</h4>
+            <p class="ep-card-text">Enterprise-grade native Android applications built with Kotlin, Jetpack Compose, and modern architecture patterns for maximum performance.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-cloud fa-3x mb-3" style="color: #FFCA28;"></i>
+            <h4 class="ep-card-title">Cloud Integration</h4>
+            <p class="ep-card-text">Enterprise Firebase solutions including Auth, Firestore, Cloud Functions, and real-time synchronization for global scale.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-robot fa-3x mb-3" style="color: var(--ep-primary-light);"></i>
+            <h4 class="ep-card-title">AI/ML Solutions</h4>
+            <p class="ep-card-text">Enterprise artificial intelligence integration with TensorFlow Lite, on-device machine learning, and predictive analytics.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-shield fa-3x mb-3" style="color: #10b981;"></i>
+            <h4 class="ep-card-title">Cybersecurity</h4>
+            <p class="ep-card-text">Enterprise security implementation including penetration testing, secure coding practices, and vulnerability assessment.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-gears fa-3x mb-3" style="color: var(--ep-accent);"></i>
+            <h4 class="ep-card-title">CI/CD Pipeline</h4>
+            <p class="ep-card-text">Enterprise DevOps with GitHub Actions, automated testing, continuous integration, and deployment automation.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-code-branch fa-3x mb-3" style="color: var(--ep-secondary);"></i>
+            <h4 class="ep-card-title">Code Review & Mentoring</h4>
+            <p class="ep-card-text">Enterprise code quality assessment, architecture review, and senior developer mentoring for teams.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 12: PROCESS (Enterprise Workflow) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section12" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">12 · Process</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Development Process</span></h2>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="ep-card text-center">
+            <div style="font-size: 2.5rem; color: var(--ep-primary-light); font-weight: 800; font-family: var(--ep-font-mono);">01</div>
+            <h5>Discovery</h5>
+            <p class="ep-card-text">Enterprise requirements analysis, stakeholder interviews, and technical feasibility assessment.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ep-card text-center">
+            <div style="font-size: 2.5rem; color: var(--ep-secondary); font-weight: 800; font-family: var(--ep-font-mono);">02</div>
+            <h5>Architecture</h5>
+            <p class="ep-card-text">Enterprise architecture design, technology stack selection, and system planning.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ep-card text-center">
+            <div style="font-size: 2.5rem; color: var(--ep-accent); font-weight: 800; font-family: var(--ep-font-mono);">03</div>
+            <h5>Development</h5>
+            <p class="ep-card-text">Agile enterprise development with continuous integration, testing, and quality assurance.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ep-card text-center">
+            <div style="font-size: 2.5rem; color: var(--ep-accent2); font-weight: 800; font-family: var(--ep-font-mono);">04</div>
+            <h5>Deployment</h5>
+            <p class="ep-card-text">Enterprise deployment, monitoring, performance optimization, and ongoing support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 13: PRICING (Enterprise Packages) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section13" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">13 · Pricing</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Investment Plans</span></h2>
+      <div class="row g-3">
+        <div class="col-lg-4">
+          <div class="ep-card text-center">
+            <h4>Starter</h4>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--ep-primary-light); font-family: var(--ep-font-mono);">$2,500</div>
+            <p class="ep-card-text">Perfect for small enterprise projects</p>
+            <div class="text-start my-3">
+              <p class="ep-card-text">✓ Single App Development</p>
+              <p class="ep-card-text">✓ Basic UI/UX Design</p>
+              <p class="ep-card-text">✓ Firebase Integration</p>
+              <p class="ep-card-text">✓ 1 Month Support</p>
+            </div>
+            <a href="#contact" class="ep-btn-primary" style="background: var(--ep-gradient); border: none; padding: 0.75rem 2rem; border-radius: 0.5rem; color: #fff; font-weight: 600; display: inline-block;">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="ep-card text-center" style="border-color: var(--ep-primary-light); border-width: 2px;">
+            <span class="ep-badge" style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--ep-accent); color: #000;">Popular</span>
+            <h4>Professional</h4>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--ep-primary-light); font-family: var(--ep-font-mono);">$5,000</div>
+            <p class="ep-card-text">Ideal for medium enterprise solutions</p>
+            <div class="text-start my-3">
+              <p class="ep-card-text">✓ Full App Development</p>
+              <p class="ep-card-text">✓ Custom UI/UX Design</p>
+              <p class="ep-card-text">✓ Firebase + REST API</p>
+              <p class="ep-card-text">✓ CI/CD Pipeline Setup</p>
+              <p class="ep-card-text">✓ 3 Months Support</p>
+            </div>
+            <a href="#contact" class="ep-btn-primary" style="background: var(--ep-gradient); border: none; padding: 0.75rem 2rem; border-radius: 0.5rem; color: #fff; font-weight: 600; display: inline-block;">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="ep-card text-center">
+            <h4>Enterprise</h4>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--ep-primary-light); font-family: var(--ep-font-mono);">$10,000+</div>
+            <p class="ep-card-text">For large enterprise solutions</p>
+            <div class="text-start my-3">
+              <p class="ep-card-text">✓ Multi-module Architecture</p>
+              <p class="ep-card-text">✓ Advanced Animations</p>
+              <p class="ep-card-text">✓ Full Backend Integration</p>
+              <p class="ep-card-text">✓ Automated Testing</p>
+              <p class="ep-card-text">✓ 12 Months Support</p>
+            </div>
+            <a href="#contact" class="ep-btn-primary" style="background: var(--ep-gradient); border: none; padding: 0.75rem 2rem; border-radius: 0.5rem; color: #fff; font-weight: 600; display: inline-block;">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 14: FAQ (Enterprise Questions) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section14" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">14 · FAQ</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Frequently Asked Questions</span></h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="ep-card">
+            <h5>What enterprise technologies do you specialize in?</h5>
+            <p class="ep-card-text">Kotlin, Jetpack Compose, MVVM, Clean Architecture, Firebase, Retrofit, Room, Dagger/Hilt, and enterprise CI/CD pipelines.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card">
+            <h5>How many years of enterprise experience?</h5>
+            <p class="ep-card-text">Nearly 12 years of enterprise-level Android development experience from Java to modern Kotlin and Jetpack.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card">
+            <h5>Available for enterprise contracts?</h5>
+            <p class="ep-card-text">Yes, open to both enterprise freelance contracts and full-time senior Android developer roles.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card">
+            <h5>What is your enterprise development process?</h5>
+            <p class="ep-card-text">Enterprise Agile methodology: Requirements → Architecture → Development → Testing → Deployment → Enterprise Support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 15: TEAM (Enterprise Collaborators) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section15" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">15 · Team</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Collaborators</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763532/MKA_11_jbijtv.webp" alt="Team" class="rounded-circle mb-3" width="70" height="70" style="object-fit: cover; border: 2px solid var(--ep-primary-light);">
+            <h5>TechStart Enterprise</h5>
+            <p class="ep-card-text">Android Development Partner</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763532/MKA_13_i4bao3.webp" alt="Team" class="rounded-circle mb-3" width="70" height="70" style="object-fit: cover; border: 2px solid var(--ep-secondary);">
+            <h5>MobileFirst Corp</h5>
+            <p class="ep-card-text">Lead Engineer Collaboration</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763536/preview_ls5ptn.webp" alt="Team" class="rounded-circle mb-3" width="70" height="70" style="object-fit: cover; border: 2px solid var(--ep-accent);">
+            <h5>FinApp Enterprise</h5>
+            <p class="ep-card-text">Product Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 16: SUPPORT (24/7 Enterprise Support) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section16" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">16 · Support</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Support System</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-regular fa-clock fa-3x mb-3" style="color: var(--ep-primary-light);"></i>
+            <h5>24/7 Enterprise Support</h5>
+            <p class="ep-card-text">Round-the-clock enterprise support with average response time under 1 hour.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-regular fa-message fa-3x mb-3" style="color: var(--ep-secondary);"></i>
+            <h5>Enterprise Channels</h5>
+            <p class="ep-card-text">Multiple enterprise communication channels: Email, Telegram, Slack, WhatsApp.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-regular fa-circle-check fa-3x mb-3" style="color: var(--ep-accent2);"></i>
+            <h5>SLA Guaranteed</h5>
+            <p class="ep-card-text">Enterprise Service Level Agreement with 99.9% uptime guarantee.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 17: RESUME (Enterprise CV Download) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section17" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">17 · Resume</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Professional Resume</span></h2>
+      <div class="ep-card text-center py-5">
+        <i class="fa-solid fa-file-pdf fa-5x mb-4" style="color: var(--ep-primary-light);"></i>
+        <h3 class="mb-3">Download Enterprise CV</h3>
+        <p class="ep-card-text mb-4" style="max-width: 500px; margin: 0 auto;">Complete enterprise profile with 12+ years of experience, skills, certifications, and enterprise achievements.</p>
+        <a href="#" class="ep-btn-primary" style="background: var(--ep-gradient); border: none; padding: 0.85rem 2.5rem; border-radius: 0.5rem; color: #fff; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;" onclick="alert('Enterprise resume download will be available soon!');">
+          <i class="fa-solid fa-download"></i>Download Enterprise CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 18: ACHIEVEMENTS (Enterprise Milestones) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section18" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">18 · Achievements</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Milestones</span></h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">🏆</div>
+            <div>
+              <h5>Google Developers Launchpad</h5>
+              <p class="ep-card-text">Completed prestigious Google Developers Launchpad enterprise program.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">🎓</div>
+            <div>
+              <h5>Enterprise Certifications</h5>
+              <p class="ep-card-text">82+ enterprise certifications across 9 technology domains.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">📱</div>
+            <div>
+              <h5>Enterprise Apps Delivered</h5>
+              <p class="ep-card-text">300+ enterprise applications successfully delivered to global clients.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">🌐</div>
+            <div>
+              <h5>Enterprise GitHub Presence</h5>
+              <p class="ep-card-text">43+ GitHub organizations for enterprise open source contributions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 19: FEATURES (Enterprise Capabilities) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section19" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">19 · Features</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Core Capabilities</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-brands fa-android fa-3x mb-3" style="color: #3DDC84;"></i>
+            <h5>Native Android</h5>
+            <p class="ep-card-text">Enterprise Kotlin, Compose, MVVM, Clean Architecture</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-fire fa-3x mb-3" style="color: #FFCA28;"></i>
+            <h5>Firebase Enterprise</h5>
+            <p class="ep-card-text">Auth, Firestore, Cloud Functions, Analytics</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-shield fa-3x mb-3" style="color: #10b981;"></i>
+            <h5>Enterprise Security</h5>
+            <p class="ep-card-text">Penetration testing, secure coding, encryption</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-gears fa-3x mb-3" style="color: var(--ep-accent);"></i>
+            <h5>CI/CD Enterprise</h5>
+            <p class="ep-card-text">GitHub Actions, Fastlane, automated testing</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-robot fa-3x mb-3" style="color: var(--ep-primary-light);"></i>
+            <h5>Enterprise AI/ML</h5>
+            <p class="ep-card-text">TFLite, on-device ML, predictive analytics</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card text-center">
+            <i class="fa-solid fa-cloud fa-3x mb-3" style="color: var(--ep-secondary);"></i>
+            <h5>Cloud Solutions</h5>
+            <p class="ep-card-text">AWS, Google Cloud, Firebase enterprise</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 20: TOOLS (Enterprise Development Toolkit) -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section20" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">20 · Tools</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Development Toolkit</span></h2>
+      <div class="ep-card">
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <span class="ep-skill"><i class="fa-brands fa-android"></i> Android Studio</span>
+          <span class="ep-skill"><i class="fa-brands fa-github"></i> GitHub Enterprise</span>
+          <span class="ep-skill"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="ep-skill"><i class="fa-brands fa-docker"></i> Docker</span>
+          <span class="ep-skill"><i class="fa-brands fa-figma"></i> Figma Enterprise</span>
+          <span class="ep-skill"><i class="fa-brands fa-jira"></i> Jira Enterprise</span>
+          <span class="ep-skill"><i class="fa-brands fa-linux"></i> Linux</span>
+          <span class="ep-skill"><i class="fa-brands fa-aws"></i> AWS</span>
+          <span class="ep-skill"><i class="fa-brands fa-google"></i> Firebase</span>
+          <span class="ep-skill"><i class="fa-solid fa-cloud"></i> Cloudinary</span>
+          <span class="ep-skill"><i class="fa-brands fa-slack"></i> Slack</span>
+          <span class="ep-skill"><i class="fa-brands fa-trello"></i> Trello</span>
+          <span class="ep-skill"><i class="fa-brands fa-confluence"></i> Confluence</span>
+          <span class="ep-skill"><i class="fa-brands fa-bitbucket"></i> Bitbucket</span>
+          <span class="ep-skill"><i class="fa-brands fa-jenkins"></i> Jenkins</span>
+          <span class="ep-skill"><i class="fa-brands fa-gitlab"></i> GitLab</span>
+        </div>
+      </div>
+    </div>
+  </section>
+   <section class="container my-4" aria-label="Portfolio page navigation">
+  <div class="ep-card d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <a
+      data-prev-page
+      class="ep-skill"
+      href="index.html"
+      aria-label="Previous portfolio part"
+    >
+      <i class="fa-solid fa-house me-2"></i>
+      Portfolio Start
+    </a>
+
+    <div class="text-center">
+      <div class="ep-label mb-1" data-part-name>Part 1</div>
+      <div class="ep-card-text" data-part-sections>
+        Sections 11-20
+      </div>
+    </div>
+
+    <a
+      data-next-page
+      class="ep-skill"
+      href="part2.html"
+      aria-label="Next portfolio part"
+    >
+      Next Part
+      <i class="fa-solid fa-arrow-right ms-2"></i>
+    </a>
+  </div>
+</section>
+  
+  <!-- ===== FOOTER ===== -->
+  <footer class="ep-footer">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-lg-4">
+          <h5 class="ep-nav-brand" style="font-size: 1rem;">MKA.Enterprise</h5>
+          <p style="color: var(--ep-text-secondary); font-size: 0.8rem;">Part 1 · Sections 11-20 · Enterprise Edition</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Navigate</h5>
+          <a href="#section11">11.Services</a>
+          <a href="#section13">13.Pricing</a>
+          <a href="#section14">14.FAQ</a>
+          <a href="#section18">18.Achievements</a>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Enterprise</h5>
+          <a href="#section12">Process</a>
+          <a href="#section16">Support</a>
+          <a href="#section17">Resume</a>
+          <a href="#section19">Features</a>
+        </div>
+        <div class="col-lg-4">
+          <h5>Part 1 Complete</h5>
+         <p style="color: var(--ep-text-secondary); font-size: 0.8rem;">
+  Continue to
+  <a href="part2.html">Part 2</a>
+  for Sections 21-40
+</p>
+        </div>
+      </div>
+      <hr class="my-3" style="border-color: var(--ep-border);">
+      <div class="text-center" style="color: var(--ep-text-secondary); font-size: 0.75rem;">
+        <p class="mb-0">
+  &copy; <span data-current-year>2026</span>
+  Moe Kyaw Aung · Enterprise Edition · Part 1/3
+</p>
+        <p class="mb-0">Sections 11-20 · 100,000+ Lines Total</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    console.log('%c📋 Part 1/5 - Sections 11-20 Complete', 'font-size: 1.5rem; font-weight: 800; color: #1e40af;');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="./assets/js/portfolio-config.js"></script>
+<script src="./assets/js/portfolio-core.js"></script>
+<script src="./assets/js/portfolio-pages.js"></script>
+</body>
+</html>
