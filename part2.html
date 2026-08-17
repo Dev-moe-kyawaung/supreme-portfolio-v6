@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supreme Portfolio V6 · Part 2 · Sections 21-40</title>
+  <meta name="description" content="Enterprise Portfolio Part 2 - Sections 21-40. Professional Android Developer Portfolio.">
+  <meta name="keywords" content="Android Developer, Enterprise, Professional Portfolio, 60 Sections, Part 2">
+  <meta name="author" content="Moe Kyaw Aung">
+  <link rel="icon" href="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+Myanmar:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* ================================================================
+       ENTERPRISE EDITION - PART 2 (Sections 21-40)
+       ================================================================ */
+
+    :root {
+      --ep-primary: #1e40af;
+      --ep-primary-dark: #1e3a8a;
+      --ep-primary-light: #3b82f6;
+      --ep-secondary: #0ea5e9;
+      --ep-accent: #f59e0b;
+      --ep-accent2: #10b981;
+      --ep-dark: #0f172a;
+      --ep-darker: #020617;
+      --ep-light: #f8fafc;
+      --ep-glass: rgba(255,255,255,0.03);
+      --ep-glass-border: rgba(255,255,255,0.06);
+      --ep-glass-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      --ep-radius: 0.75rem;
+      --ep-radius-lg: 1.25rem;
+      --ep-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --ep-font-sans: 'Inter', -apple-system, sans-serif;
+      --ep-font-mono: 'JetBrains Mono', monospace;
+      --ep-font-myan: 'Noto Sans Myanmar', sans-serif;
+      --ep-font-dm: 'DM Sans', sans-serif;
+      --ep-text: #f1f5f9;
+      --ep-text-secondary: #94a3b8;
+      --ep-gradient: linear-gradient(135deg, #1e40af, #0ea5e9, #f59e0b);
+      --ep-border: rgba(148, 163, 184, 0.1);
+    }
+
+    [data-bs-theme="light"] {
+      --ep-glass: rgba(0,0,0,0.02);
+      --ep-glass-border: rgba(0,0,0,0.06);
+      --ep-dark: #f8fafc;
+      --ep-darker: #ffffff;
+      --ep-text: #0f172a;
+      --ep-text-secondary: #64748b;
+      --ep-border: rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      font-family: var(--ep-font-sans);
+      background: var(--ep-darker);
+      color: var(--ep-text);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--ep-primary-light); text-decoration: none; transition: color var(--ep-transition); }
+    a:hover { color: var(--ep-secondary); }
+    .myan { font-family: var(--ep-font-myan); }
+    .mono { font-family: var(--ep-font-mono); }
+    .dm { font-family: var(--ep-font-dm); }
+
+    /* Navigation */
+    .ep-nav {
+      backdrop-filter: blur(20px);
+      background: rgba(15,23,42,0.85) !important;
+      border-bottom: 1px solid var(--ep-border);
+      padding: 0.75rem 1.5rem;
+    }
+    .ep-nav-brand {
+      font-weight: 800;
+      font-size: 1.15rem;
+      background: var(--ep-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ep-nav .nav-link {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--ep-text-secondary) !important;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.4rem;
+      transition: all var(--ep-transition);
+    }
+    .ep-nav .nav-link:hover { color: var(--ep-text) !important; background: var(--ep-glass); }
+
+    /* Section Styles */
+    .ep-section {
+      padding: 4rem 0;
+      position: relative;
+    }
+    .ep-label {
+      display: inline-block;
+      font-family: var(--ep-font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--ep-primary-light);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .ep-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+    .ep-gradient-text {
+      background: var(--ep-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ep-card {
+      background: var(--ep-glass);
+      border: 1px solid var(--ep-border);
+      border-radius: var(--ep-radius-lg);
+      padding: 1.75rem;
+      transition: all var(--ep-transition);
+      height: 100%;
+    }
+    .ep-card:hover {
+      border-color: var(--ep-primary-light);
+      transform: translateY(-3px);
+      box-shadow: var(--ep-glass-shadow);
+    }
+    .ep-card-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+    .ep-card-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .ep-card-text { color: var(--ep-text-secondary); font-size: 0.85rem; line-height: 1.7; }
+
+    /* Counter */
+    .ep-counter { text-align: center; padding: 1.5rem; }
+    .ep-counter-num { font-size: 2.5rem; font-weight: 800; color: var(--ep-primary-light); font-family: var(--ep-font-mono); line-height: 1; }
+    .ep-counter-label { font-size: 0.8rem; color: var(--ep-text-secondary); margin-top: 0.25rem; }
+
+    /* Timeline */
+    .ep-timeline { position: relative; padding-left: 2rem; }
+    .ep-timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--ep-border); }
+    .ep-timeline-item { position: relative; padding-bottom: 1.5rem; }
+    .ep-timeline-item::before { content: ''; position: absolute; left: -2.1rem; top: 0.4rem; width: 8px; height: 8px; background: var(--ep-primary-light); border-radius: 50%; }
+    .ep-timeline-year { font-family: var(--ep-font-mono); font-size: 0.8rem; color: var(--ep-primary-light); font-weight: 600; }
+
+    /* Skill Chip */
+    .ep-skill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.4rem 0.9rem; background: var(--ep-glass);
+      border: 1px solid var(--ep-border); border-radius: 0.4rem;
+      font-size: 0.8rem; font-weight: 500; margin: 0.2rem;
+      transition: all var(--ep-transition);
+    }
+    .ep-skill:hover { border-color: var(--ep-primary-light); transform: translateY(-2px); }
+
+    /* Badge */
+    .ep-badge {
+      display: inline-block; padding: 0.15rem 0.5rem; border-radius: 0.25rem;
+      font-size: 0.6rem; font-weight: 700; background: var(--ep-primary); color: #fff;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .ep-footer {
+      background: rgba(0,0,0,0.4); backdrop-filter: blur(20px);
+      border-top: 1px solid var(--ep-border); padding: 3rem 0 1.5rem;
+    }
+    .ep-footer h5 { font-weight: 700; font-size: 0.85rem; margin-bottom: 0.8rem; }
+    .ep-footer a { color: var(--ep-text-secondary); font-size: 0.8rem; display: block; padding: 0.15rem 0; }
+    .ep-footer a:hover { color: var(--ep-primary-light); }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+      .ep-section { padding: 2.5rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+  
+<nav class="navbar navbar-expand-lg ep-nav fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand ep-nav-brand" href="#section21">
+      MKA.Part2
+    </a>
+
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navPart2"
+      aria-controls="navPart2"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span
+        class="navbar-toggler-icon"
+        style="filter: invert(1);"
+      ></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navPart2">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#section21">21.GitHub</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section22">22.Lovable</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section23">23.Email</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section24">24.Social</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section25">25.Burmese</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section26">26.Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section27">27.Newsletter</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section28">28.Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section29">29.Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section30">30.Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section31">31.Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section32">32.Analytics</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section33">33.Security</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section34">34.Performance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section35">35.Awards</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section36">36.Partners</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section37">37.Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section38">38.Roadmap</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section39">39.Clients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section40">40.Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- ================================================================ -->
+  <!-- SECTION 21: GITHUB ACCOUNTS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section21" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">21 · GitHub</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">GitHub Ecosystem</span></h2>
+      <div class="ep-card">
+        <div class="row g-2">
+          <div class="col-md-3 col-6"><a href="https://moekyawaung-china.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🌏 moekyawaung-china</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung-developer.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">💻 moekyawaung-developer</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyaw-aung-mm.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🇲🇲 moekyaw-aung-mm</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung-microsoft.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🔷 moekyawaung-microsoft</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung-cyber.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🛡️ moekyawaung-cyber</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung-bangkok.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🇹🇭 moekyawaung-bangkok</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung-micro.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🔬 moekyawaung-micro</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung.github.io/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">⭐ moekyawaung</a></div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="https://github.com/Dev-moe-kyawaung/" target="_blank" class="ep-skill">View All 43+ Enterprise Accounts <i class="fa-brands fa-github ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 22: LOVABLE APPS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section22" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">22 · Lovable</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Lovable WPA Apps</span></h2>
+      <div class="ep-card">
+        <div class="row g-2">
+          <div class="col-md-3 col-6"><a href="https://happy-cv-creator.lovable.app" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">📄 happy-cv-creator</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaung.lovable.app" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">⭐ moekyawaung</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyawaungmybio.lovable.app/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">👤 moekyawaungmybio</a></div>
+          <div class="col-md-3 col-6"><a href="https://the-cv-palette.lovable.app" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🎨 the-cv-palette</a></div>
+          <div class="col-md-3 col-6"><a href="https://moekyaw-url.lovable.app" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🔗 moekyaw-url</a></div>
+          <div class="col-md-3 col-6"><a href="https://cv-beacon.lovable.app/" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🔦 cv-beacon</a></div>
+          <div class="col-md-3 col-6"><a href="https://pixel-perfect-snap-39.lovable.app" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">📸 pixel-perfect-snap</a></div>
+          <div class="col-md-3 col-6"><a href="https://profile-persuasion-hub.lovable.app" target="_blank" class="d-block p-2 border-bottom border-secondary" style="color: var(--ep-text);">🎯 profile-persuasion</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 23: EMAIL COLLECTION -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section23" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">23 · Emails</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Email Aliases</span></h2>
+      <div class="ep-card">
+        <div class="row g-2">
+          <div class="col-md-4 col-6"><span class="d-block p-2 border-bottom border-secondary"><i class="fa-regular fa-envelope me-2" style="color: var(--ep-primary-light);"></i>moekyawaung@programmer.net</span></div>
+          <div class="col-md-4 col-6"><span class="d-block p-2 border-bottom border-secondary"><i class="fa-regular fa-envelope me-2" style="color: var(--ep-primary-light);"></i>moekyawaung@technologist.com</span></div>
+          <div class="col-md-4 col-6"><span class="d-block p-2 border-bottom border-secondary"><i class="fa-regular fa-envelope me-2" style="color: var(--ep-primary-light);"></i>moekyawaung@engineer.com</span></div>
+          <div class="col-md-4 col-6"><span class="d-block p-2 border-bottom border-secondary"><i class="fa-regular fa-envelope me-2" style="color: var(--ep-primary-light);"></i>moekyawaung@hackermail.com</span></div>
+          <div class="col-md-4 col-6"><span class="d-block p-2 border-bottom border-secondary"><i class="fa-regular fa-envelope me-2" style="color: var(--ep-primary-light);"></i>moekyawaung@linuxmail.org</span></div>
+          <div class="col-md-4 col-6"><span class="d-block p-2 border-bottom border-secondary"><i class="fa-regular fa-envelope me-2" style="color: var(--ep-primary-light);"></i>moekyawaung@usa.com</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 24: SOCIAL MEDIA -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section24" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">24 · Social</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Social Presence</span></h2>
+      <div class="ep-card">
+        <div class="row g-2">
+          <div class="col-md-4 col-6"><a href="https://github.com/Dev-moe-kyawaung/" target="_blank" class="d-flex align-items-center gap-2 p-2 border-bottom border-secondary" style="color: var(--ep-text);"><i class="fa-brands fa-github fa-2x"></i><div><strong>GitHub</strong><br><small class="text-secondary">Enterprise</small></div></a></div>
+          <div class="col-md-4 col-6"><a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" class="d-flex align-items-center gap-2 p-2 border-bottom border-secondary" style="color: var(--ep-text);"><i class="fa-brands fa-linkedin-in fa-2x" style="color: #0a66c2;"></i><div><strong>LinkedIn</strong><br><small class="text-secondary">Enterprise Profile</small></div></a></div>
+          <div class="col-md-4 col-6"><a href="https://t.me/moekyawaung" target="_blank" class="d-flex align-items-center gap-2 p-2 border-bottom border-secondary" style="color: var(--ep-text);"><i class="fa-brands fa-telegram fa-2x" style="color: #26A5E4;"></i><div><strong>Telegram</strong><br><small class="text-secondary">Enterprise Channel</small></div></a></div>
+          <div class="col-md-4 col-6"><a href="https://www.youtube.com/@UCuTXUguZb4xjeL2nX8WJG" target="_blank" class="d-flex align-items-center gap-2 p-2 border-bottom border-secondary" style="color: var(--ep-text);"><i class="fa-brands fa-youtube fa-2x" style="color: #ff0000;"></i><div><strong>YouTube</strong><br><small class="text-secondary">Enterprise Tutorials</small></div></a></div>
+          <div class="col-md-4 col-6"><a href="https://bsky.app/profile/moekyawaung96.bsky.social" target="_blank" class="d-flex align-items-center gap-2 p-2 border-bottom border-secondary" style="color: var(--ep-text);"><i class="fa-brands fa-bluesky fa-2x" style="color: #0285ff;"></i><div><strong>Bluesky</strong><br><small class="text-secondary">Social</small></div></a></div>
+          <div class="col-md-4 col-6"><a href="https://gravatar.com/moekyawaung13721" target="_blank" class="d-flex align-items-center gap-2 p-2 border-bottom border-secondary" style="color: var(--ep-text);"><i class="fa-brands fa-gravatar fa-2x" style="color: #1E8CBE;"></i><div><strong>Gravatar</strong><br><small class="text-secondary">Enterprise Profile</small></div></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 25: BURMESE LANGUAGE -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section25" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">25 · Myanmar</div>
+      <h2 class="ep-title myan">မြန်မာဘာသာဖြင့် <span class="ep-gradient-text">Enterprise ဆက်သွယ်ရန်</span></h2>
+      <div class="ep-card myan" style="font-size: 1.05rem; line-height: 1.9;">
+        <p>မင်္ဂလာပါ။ ကျွန်တော်မိုးကျော်အောင်ဖြစ်ပါတယ်။ <strong>Senior Android Developer</strong> တစ်ယောက်အနေနဲ့ Kotlin, Jetpack Compose, MVVM, Clean Architecture တို့ကိုအသုံးပြုပြီး enterprise application များရေးသားနေပါတယ်။</p>
+        <p>ကျွန်တော့်ရဲ့အတွေ့အကြုံ <strong>(၁၂) နှစ်ကျော်</strong> ရှိပြီဖြစ်ပြီး enterprise app ပေါင်း <strong>၃၀၀+</strong> ကျော်ကိုရေးသားခဲ့ပါတယ်။</p>
+        <div class="mt-3 d-flex gap-2">
+          <a href="mailto:moekyawaung@programmer.net" class="ep-skill"><i class="fa-regular fa-envelope me-2"></i>Enterprise အီးမေးလ်ပို့ရန်</a>
+          <a href="https://t.me/moekyawaung" target="_blank" class="ep-skill"><i class="fa-brands fa-telegram me-2"></i>Enterprise Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 26: MAP -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section26" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">26 · Location</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Global Presence</span></h2>
+      <div class="ep-card p-0 overflow-hidden" style="height: 350px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473.123456789!2d99.833333!3d20.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDI3JzAwLjAiTiA5OcKwNTAnMDAuMCJF!5e0!3m2!1sen!2sth!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="text-center mt-2 d-flex flex-wrap justify-content-center gap-2">
+        <span class="ep-skill"><i class="fa-solid fa-location-dot" style="color: var(--ep-primary-light);"></i> Tachileik, Myanmar</span>
+        <span class="ep-skill"><i class="fa-solid fa-location-dot" style="color: var(--ep-secondary);"></i> Bangkok, Thailand</span>
+        <span class="ep-skill"><i class="fa-solid fa-globe" style="color: var(--ep-accent);"></i> Enterprise Remote Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 27: NEWSLETTER -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section27" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">27 · Newsletter</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Newsletter</span></h2>
+      <div class="ep-card text-center py-5">
+        <i class="fa-regular fa-envelope fa-4x mb-4" style="color: var(--ep-primary-light);"></i>
+        <h3 class="mb-3">Subscribe to Enterprise Updates</h3>
+        <p class="ep-card-text mb-4" style="max-width: 500px; margin: 0 auto;">Get enterprise Android development insights, Kotlin best practices, and project updates.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Enterprise Newsletter!');" style="max-width: 450px; margin: auto;">
+          <div class="d-flex gap-2">
+            <input type="email" class="form-control bg-transparent text-white border-secondary" placeholder="enterprise@email.com" required>
+            <button type="submit" class="ep-skill" style="background: var(--ep-gradient); color: #fff; border: none; padding: 0.5rem 1.5rem;">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 28: BLOG -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section28" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">28 · Blog</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Tech Insights</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="ep-card">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📝</div>
+            <h5>Enterprise Kotlin Multiplatform</h5>
+            <p class="ep-card-text">Exploring enterprise KMM for sharing business logic across platforms.</p>
+            <small style="color: var(--ep-primary-light);">Read more →</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚡</div>
+            <h5>Enterprise CI/CD Best Practices</h5>
+            <p class="ep-card-text">Setting up enterprise-grade CI/CD pipelines with GitHub Actions.</p>
+            <small style="color: var(--ep-primary-light);">Read more →</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🛡️</div>
+            <h5>Enterprise Android Security</h5>
+            <p class="ep-card-text">Essential enterprise security practices for Android developers.</p>
+            <small style="color: var(--ep-primary-light);">Read more →</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 29: GALLERY -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section29" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">29 · Gallery</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Visual Showcase</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4 col-6">
+          <div class="ep-card p-2">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image-1_f6zlmk.jpg" alt="Enterprise Gallery 1" class="img-fluid rounded-3">
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="ep-card p-2">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795856/copilot_image_1778795000722_eo96gj.png" alt="Enterprise Gallery 2" class="img-fluid rounded-3">
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="ep-card p-2">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795825/cloud-icon-poster-1_2_opl7sy.png" alt="Enterprise Gallery 3" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 30: TESTIMONIALS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section30" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">30 · Testimonials</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Client Reviews</span></h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="ep-card">
+            <p class="fst-italic" style="color: var(--ep-text-secondary);">"Moe delivered an exceptional enterprise Android application. His Kotlin expertise and Clean Architecture approach transformed our business operations."</p>
+            <div class="d-flex align-items-center gap-2 mt-3">
+              <div style="width: 40px; height: 40px; background: var(--ep-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff;">SC</div>
+              <div><strong>Sarah Chen</strong><br><small class="text-secondary">CTO, Enterprise TechStart</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card">
+            <p class="fst-italic" style="color: var(--ep-text-secondary);">"Enterprise-grade development at its finest. Moe transformed our legacy codebase into a modern, maintainable enterprise application."</p>
+            <div class="d-flex align-items-center gap-2 mt-3">
+              <div style="width: 40px; height: 40px; background: var(--ep-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff;">JP</div>
+              <div><strong>James Park</strong><br><small class="text-secondary">Lead Engineer, MobileFirst Enterprise</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 31: CERTIFICATES -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section31" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">31 · Certificates</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Credentials</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4 col-6"><div class="ep-card"><div class="fw-bold">Google Associate Android Developer</div><small class="text-secondary">Enterprise Certified</small></div></div>
+        <div class="col-md-4 col-6"><div class="ep-card"><div class="fw-bold">Kotlin Enterprise Expert</div><small class="text-secondary">JetBrains Certified</small></div></div>
+        <div class="col-md-4 col-6"><div class="ep-card"><div class="fw-bold">Firebase Enterprise</div><small class="text-secondary">Google Cloud Certified</small></div></div>
+        <div class="col-md-4 col-6"><div class="ep-card"><div class="fw-bold">Enterprise Cybersecurity</div><small class="text-secondary">Security Certified</small></div></div>
+        <div class="col-md-4 col-6"><div class="ep-card"><div class="fw-bold">AI/ML Enterprise</div><small class="text-secondary">TensorFlow Certified</small></div></div>
+        <div class="col-md-4 col-6"><div class="ep-card"><div class="fw-bold">Cloud Architecture</div><small class="text-secondary">AWS Enterprise Certified</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 32: ANALYTICS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section32" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">32 · Analytics</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Performance Metrics</span></h2>
+      <div class="ep-card">
+        <div class="row g-3 text-center">
+          <div class="col-md-3 col-6"><div class="ep-counter"><div class="ep-counter-num">99.9%</div><div class="ep-counter-label">Enterprise Uptime</div></div></div>
+          <div class="col-md-3 col-6"><div class="ep-counter"><div class="ep-counter-num">< 1s</div><div class="ep-counter-label">Enterprise Load Time</div></div></div>
+          <div class="col-md-3 col-6"><div class="ep-counter"><div class="ep-counter-num">95%</div><div class="ep-counter-label">App Performance</div></div></div>
+          <div class="col-md-3 col-6"><div class="ep-counter"><div class="ep-counter-num">100%</div><div class="ep-counter-label">Client Retention</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 33: SECURITY -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section33" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">33 · Security</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Security Framework</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="ep-card text-center"><i class="fa-solid fa-shield-halved fa-3x mb-3" style="color: #10b981;"></i><h5>Penetration Testing</h5><p class="ep-card-text">Enterprise vulnerability assessment and security testing.</p></div></div>
+        <div class="col-md-4"><div class="ep-card text-center"><i class="fa-solid fa-lock fa-3x mb-3" style="color: var(--ep-primary-light);"></i><h5>Secure Coding</h5><p class="ep-card-text">Enterprise secure coding practices and code review.</p></div></div>
+        <div class="col-md-4"><div class="ep-card text-center"><i class="fa-solid fa-key fa-3x mb-3" style="color: var(--ep-accent);"></i><h5>Encryption</h5><p class="ep-card-text">Enterprise-grade end-to-end encryption implementation.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 34: PERFORMANCE -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section34" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">34 · Performance</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Optimization</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="ep-card text-center"><i class="fa-solid fa-gauge-high fa-3x mb-3" style="color: var(--ep-primary-light);"></i><h5>App Performance</h5><p class="ep-card-text">Enterprise applications optimized for speed and efficiency.</p></div></div>
+        <div class="col-md-4"><div class="ep-card text-center"><i class="fa-solid fa-server fa-3x mb-3" style="color: var(--ep-secondary);"></i><h5>Server Optimization</h5><p class="ep-card-text">Enterprise server-side performance tuning and caching.</p></div></div>
+        <div class="col-md-4"><div class="ep-card text-center"><i class="fa-solid fa-mobile-screen-button fa-3x mb-3" style="color: var(--ep-accent2);"></i><h5>Mobile Performance</h5><p class="ep-card-text">Enterprise mobile app performance monitoring and optimization.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 35: AWARDS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section35" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">35 · Awards</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Recognition</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">🥇</div>
+            <div><h5>Best Enterprise Android Developer 2024</h5><p class="ep-card-text">Recognized for enterprise mobile excellence.</p></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">🏅</div>
+            <div><h5>Google Enterprise Launchpad Graduate</h5><p class="ep-card-text">Completed enterprise Google Developers program.</p></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2rem;">📜</div>
+            <div><h5>82+ Enterprise Certifications</h5><p class="ep-card-text">Multi-domain enterprise expertise.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 36: PARTNERS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section36" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">36 · Partners</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Partners</span></h2>
+      <div class="ep-card">
+        <div class="row align-items-center text-center g-4">
+          <div class="col-md-2 col-4"><div style="font-size: 1.8rem; opacity: 0.4; font-weight: 700;">Google</div></div>
+          <div class="col-md-2 col-4"><div style="font-size: 1.8rem; opacity: 0.4; font-weight: 700;">Microsoft</div></div>
+          <div class="col-md-2 col-4"><div style="font-size: 1.8rem; opacity: 0.4; font-weight: 700;">Amazon</div></div>
+          <div class="col-md-2 col-4"><div style="font-size: 1.8rem; opacity: 0.4; font-weight: 700;">Apple</div></div>
+          <div class="col-md-2 col-4"><div style="font-size: 1.8rem; opacity: 0.4; font-weight: 700;">Meta</div></div>
+          <div class="col-md-2 col-4"><div style="font-size: 1.8rem; opacity: 0.4; font-weight: 700;">Twitter</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 37: TIMELINE EXTENDED -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section37" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">37 · Timeline</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Complete Journey</span></h2>
+      <div class="ep-timeline">
+        <div class="ep-timeline-item"><div class="ep-timeline-year">2025 - Future</div><p class="ep-card-text">Enterprise AI-Powered Applications · Next-gen Android with on-device AI/ML</p></div>
+        <div class="ep-timeline-item"><div class="ep-timeline-year">2024 - Present</div><p class="ep-card-text">Senior Enterprise Android Engineer · Multi-module architecture · CI/CD · Mentoring</p></div>
+        <div class="ep-timeline-item"><div class="ep-timeline-year">2020 - 2023</div><p class="ep-card-text">Enterprise Android Developer · Kotlin · Jetpack · Firebase · Material 3</p></div>
+        <div class="ep-timeline-item"><div class="ep-timeline-year">2016 - 2019</div><p class="ep-card-text">Enterprise Mobile Developer · Java & Kotlin · REST APIs · MVVM</p></div>
+        <div class="ep-timeline-item"><div class="ep-timeline-year">2012 - 2015</div><p class="ep-card-text">Junior Enterprise Developer · Android (Java) · First enterprise apps</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 38: ROADMAP -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section38" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">38 · Roadmap</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Future Vision</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="ep-card text-center"><div style="font-size: 2rem; color: var(--ep-primary-light); font-weight: 700;">Q1 2025</div><h5>Enterprise Kotlin Multiplatform</h5><p class="ep-card-text">Expand to iOS with KMM</p></div></div>
+        <div class="col-md-4"><div class="ep-card text-center"><div style="font-size: 2rem; color: var(--ep-secondary); font-weight: 700;">Q2 2025</div><h5>Enterprise AI Integration</h5><p class="ep-card-text">Advanced ML features</p></div></div>
+        <div class="col-md-4"><div class="ep-card text-center"><div style="font-size: 2rem; color: var(--ep-accent); font-weight: 700;">Q3 2025</div><h5>Enterprise Open Source</h5><p class="ep-card-text">Launch community projects</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 39: CLIENTS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section39" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">39 · Clients</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Happy Clients</span></h2>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="ep-card"><p class="fst-italic" style="color: var(--ep-text-secondary);">"Exceptional enterprise Android development. Delivered on time and exceeded expectations."</p><div class="d-flex align-items-center gap-2 mt-2"><div style="width: 35px; height: 35px; background: var(--ep-primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem;">SC</div><div><strong style="font-size: 0.9rem;">Sarah Chen</strong><br><small class="text-secondary">TechStart Enterprise</small></div></div></div></div>
+        <div class="col-md-4"><div class="ep-card"><p class="fst-italic" style="color: var(--ep-text-secondary);">"Transformed our legacy enterprise codebase into a modern, maintainable application."</p><div class="d-flex align-items-center gap-2 mt-2"><div style="width: 35px; height: 35px; background: var(--ep-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem;">JP</div><div><strong style="font-size: 0.9rem;">James Park</strong><br><small class="text-secondary">MobileFirst Enterprise</small></div></div></div></div>
+        <div class="col-md-4"><div class="ep-card"><p class="fst-italic" style="color: var(--ep-text-secondary);">"Enterprise-grade quality. Our app was delivered ahead of schedule with top-notch quality."</p><div class="d-flex align-items-center gap-2 mt-2"><div style="width: 35px; height: 35px; background: var(--ep-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem;">AL</div><div><strong style="font-size: 0.9rem;">Anna Li</strong><br><small class="text-secondary">FinApp Enterprise</small></div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECTION 40: PROJECTS -->
+  <!-- ================================================================ -->
+  <section class="ep-section" id="section40" data-aos="fade-up">
+    <div class="container">
+      <div class="ep-label">40 · Projects</div>
+      <h2 class="ep-title">Enterprise <span class="ep-gradient-text">Featured Projects</span></h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2.5rem;">📱</div>
+            <div>
+              <h5>Enterprise PulseSync</h5>
+              <p class="ep-card-text">Real-time enterprise sync platform with multi-module architecture and CI/CD pipeline.</p>
+              <span class="ep-badge" style="background: var(--ep-success);">Enterprise</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-card d-flex align-items-start gap-3">
+            <div style="font-size: 2.5rem;">🛒</div>
+            <div>
+              <h5>Enterprise POS Ultimate</h5>
+              <p class="ep-card-text">Complete enterprise inventory, billing, reports, multi-user system.</p>
+              <span class="ep-badge" style="background: var(--ep-accent);">Enterprise Pro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container my-4" aria-label="Portfolio page navigation">
+  <div class="ep-card d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <a
+      data-prev-page
+      class="ep-skill"
+      href="index.html"
+      aria-label="Previous portfolio part"
+    >
+      <i class="fa-solid fa-arrow-left me-2"></i>
+      Previous Part
+    </a>
+
+    <div class="text-center">
+      <div class="ep-label mb-1" data-part-name>Part 2</div>
+      <div class="ep-card-text" data-part-sections>
+        Sections 21-40
+      </div>
+    </div>
+
+    <a
+      data-next-page
+      class="ep-skill"
+      href="part3.html"
+      aria-label="Next portfolio part"
+    >
+      Next Part
+      <i class="fa-solid fa-arrow-right ms-2"></i>
+    </a>
+  </div>
+</section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="ep-footer">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-lg-4">
+          <h5 class="ep-nav-brand" style="font-size: 1rem;">MKA.Enterprise</h5>
+          <p style="color: var(--ep-text-secondary); font-size: 0.8rem;">Part 2 · Sections 21-40 · Enterprise Edition · 20 Complete Sections</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Sections 21-30</h5>
+          <a href="#section21">21.GitHub</a>
+          <a href="#section23">23.Emails</a>
+          <a href="#section25">25.Burmese</a>
+          <a href="#section27">27.Newsletter</a>
+          <a href="#section29">29.Gallery</a>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Sections 31-40</h5>
+          <a href="#section31">31.Certificates</a>
+          <a href="#section33">33.Security</a>
+          <a href="#section35">35.Awards</a>
+          <a href="#section37">37.Timeline</a>
+          <a href="#section39">39.Clients</a>
+        </div>
+        <div class="col-lg-4">
+          <h5>Part 2 Complete</h5>
+         <p style="color: var(--ep-text-secondary); font-size: 0.8rem;">
+  Continue to
+  <a href="part3.html">Part 3</a>
+  for Sections 41-50
+</p>
+        </div>
+      </div>
+      <hr class="my-3" style="border-color: var(--ep-border);">
+      <div class="text-center" style="color: var(--ep-text-secondary); font-size: 0.75rem;">
+        <p class="mb-0">&copy; 2025 Moe Kyaw Aung · Enterprise Edition · Part 2/5</p>
+        <p class="mb-0">Sections 21-40 · 20 Complete Enterprise Sections</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    console.log('%c📋 Part 2/5 - Sections 21-40 Complete', 'font-size: 1.5rem; font-weight: 800; color: #1e40af;');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="./assets/js/portfolio-config.js"></script>
+<script src="./assets/js/portfolio-core.js"></script>
+<script src="./assets/js/portfolio-pages.js"></script>
+</body>
+</html>
